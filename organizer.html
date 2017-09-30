@@ -48,6 +48,8 @@ body {
 </head>
 <body>
 
+
+
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">Home</a>
@@ -56,9 +58,66 @@ body {
   <a href="#">Contact</a>
 </div>
 
-<h2>Animated Sidenav Example</h2>
-<p>Click on the element below to open the side navigation menu.</p>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+<h2>Job Organizer</h2>
+<p>Use this table to help you organize your job searches!</p>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<div class="set-form">
+  <table id="myTable" class="table table-bordered">
+    <tr>
+      <th>Company</th>
+      <th>Job Title</th> 
+      <th>Recruiter/Contact Info</th>
+      <th>Requirements</th>
+      <th>Personal Connection</th>
+      <th>Application Due Date</th>
+      <th>Applied</th>
+      <th>Interview Date</th>
+      <th>Thank You</th>
+      <th>Current Status</th>
+    </tr>
+    <tr>
+      <td>
+        <textarea name="Company" placeholder="Company" th:field="${questionAnswerSet.company}" id="company" style="resize: none; width: 100%;"></textarea>
+      </td>
+      <td>
+        <textarea name="Job Title" placeholder="Job Title" th:field="${questionAnswerSet.jobtitle}" id="job title" style="resize: none; width: 100%;"></textarea>
+      </td>
+      <td>
+        <textarea name="Recruiter/Contact Info" placeholder="Recruiter/Contact Info" th:field="${questionAnswerSet.recruiter/contactinfo}" id="recruiter/contact info" style="resize: none; width: 100%;"></textarea>
+      </td>
+       <td>
+        <textarea name="Requirements" placeholder="Requirements" th:field="${questionAnswerSet.requirements}" id="requirements" style="resize: none; width: 100%;"></textarea>
+      </td>
+       <td>
+        <textarea name="Personal Connection" placeholder="Personal Connection" th:field="${questionAnswerSet.personalconnection}" id="personal connection" style="resize: none; width: 100%;"></textarea>
+      </td>
+       <td>
+        <textarea name="Application Due Date" placeholder="Application Due Date" th:field="${questionAnswerSet.applicationduedate}" id="application due date" style="resize: none; width: 100%;"></textarea>
+      </td>
+       <td>
+        <textarea name="Applied" placeholder="Applied?" th:field="${questionAnswerSet.applied}" id="applied" style="resize: none; width: 100%;"></textarea>
+      </td>
+       <td>
+        <textarea name="Interview Date" placeholder="Interview Date" th:field="${questionAnswerSet.interviewdate}" id="interview date" style="resize: none; width: 100%;"></textarea>
+      </td>
+       <td>
+        <textarea name="Thank You" placeholder="Thank You" th:field="${questionAnswerSet.thankyou}" id="thank you" style="resize: none; width: 100%;"></textarea>
+      </td>
+       <td>
+        <textarea name="Current Status" placeholder="Current Status" th:field="${questionAnswerSet.currentstatus}" id="current status" style="resize: none; width: 100%;"></textarea>
+      </td>
+    </tr>
+  </table>
+  <div class="set-form">
+    <input type="button" id="more_fields" onclick="add_fields();" value="Add More" class="btn btn-info" />
+  </div>
+
+<script type="text/javascript">
+function add_fields() {
+document.getElementById("myTable").insertRow(-1).innerHTML = '<tr><td><textarea name ="Company" placeholder="Company" th: field = "${questionAnswerSet.company}" id="company" style = "resize: none; width:100%;"></textarea></td><td><textarea name="Job Title" placeholder ="Job Title" th: field = "${questionAnswerSet.jobtitle}" id="job title" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Recruiter/Contact Info" placeholder ="Recruiter/Contact Info" th: field = "${questionAnswerSet.recruiter/contactinfo}" id="recruiter/contact info" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Requirements" placeholder ="Requirements" th: field = "${questionAnswerSet.requirements}" id="requirements" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Personal Connection" placeholder ="Personal Connection" th: field = "${questionAnswerSet.personalconnection}" id="personal connection" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Application Due Date" placeholder ="Application Due Date" th: field = "${questionAnswerSet.applicationduedate}" id="application due date" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Applied" placeholder ="Applied?" th: field = "${questionAnswerSet.applied}" id="applied" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Interview Date" placeholder ="Interview Date" th: field = "${questionAnswerSet.interviewdate}" id="interview date" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Thank You" placeholder ="Thank You" th: field = "${questionAnswerSet.thankyou}" id="thank you" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Current Status" placeholder ="Current Status" th: field = "${questionAnswerSet.currentstatus}" id="current status" style="resize:none;width: 100%;"></textarea></td >';
+}
+</script>
 
 <script>
 function openNav() {
@@ -69,6 +128,8 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 </script>
+
+
      
 </body>
 </html> 
