@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--CSS Style Code for the header-->
 <style>
 ul {
     list-style-type: none;
@@ -9,50 +10,124 @@ ul {
     overflow: hidden;
     background-color: #333;
 }
-
 li {
     float: left;
 }
-
 li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-}
+    font-family: Verdana;
 
+}
 li a:hover {
     background-color: #111;
 }
 </style>
 </head>
 <body>
-
+<!-- Header List -->
 <ul>
   <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+  <li><a href="#organizer">Organizer</a></li>
+  <li><a href="#map">Map</a></li>
+  <li><a href="#COL">COL</a></li>
+  <li><a href="#interviewtips/suggestions">Inteview Tips/Suggestions</a></li>
 </ul>
+
+<!-- Page Background -->
 <style>
-    { margin: 0; padding: 0; }
+     { margin: 0; padding: 0; }
 
     html { 
-        background-image: url("images/bground.jpeg") no-repeat center center fixed; 
-       background-size: cover;
-     /** //   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-      /**  background-color: #cccfff; **/
-
+        background-image: url("images/bground.jpeg");
+        background-size: cover;
+        background-color: #cccfff;
+    }
+   
     }
 </style>
-<div style="width: 100%;">
-    <div style="max-width: 960px; margin: 0 auto;">
-        <img src="header_page.png" style="width: 100%;" alt="My Hero" />
-    </div>
-</div>
-</body>
-</html>
 
+<!-- Header Image Style -->
+<div> 
+
+<style type="text/css">
+.container {
+    background-image: url("real_header");
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 100px;
+    border: 1px solid #ddd;
+}
+.full { background-size: 100% 100%; }
+.contain { background-size: contain; }
+.cover { background-size: cover; }
+</style>
+
+<img src="real_header.png" style="width: 100%;" alt="My Hero" />
+</div>
+
+
+
+<h1> <div id="topBlackBar"/> Don't Be Mainstream! <div id="bottomBlackBar"/>
+</h1>
+<style type="text/css">
+  h1 {
+    font-style: italic;
+    color: #ff9900;
+    text-align: center;
+  }
+  #topBlackBar {
+                border-top: 50px solid #33CCCC;
+            }
+  #bottomBlackBar {
+                    border-top: 50px solid #0099FF;
+                  }
+
+</style>
+  
+</body>
+<footer>
+  <div>
+ <img class="image1" src="otter3.png">
+ <img class="instagram" src="instagram.png">
+ <img class="facebook" src="facebook.png">
+ <img class="twitter" src="twitter.png">
+ <h2> Follow us on social media! </h2>
+  <style>
+    .image1 {
+    position: absolute;
+    right: 0px;
+    bottom: -250px;
+    max-width:50%;
+    max-height:50%;
+}
+    .instagram {
+      position: absolute;
+      left: 400px;
+      max-width: 10%;
+      max-height: 10%;
+    }
+    .facebook {
+      position: absolute;
+      left: 600px;
+      max-width: 10%;
+      max-height: 10%;
+    }
+    .twitter {
+      position: absolute;
+      left: 800px;
+      max-width: 10%;
+      max-height: 10%;
+    }
+h2 {
+font-family: verdana; 
+} 
+</style>
+</div>
+</footer>
+
+
+</html>
