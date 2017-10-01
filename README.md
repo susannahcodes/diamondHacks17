@@ -5,3 +5,10 @@ Susannah Jones @susannahjones, Gabby DeFilippo @gabby6, Viviana Rosas @vkrosas1,
 
 ## Purpose:
 NOJO is a website for helping students juggle the job search with their other activities by means of organization.
+
+## Tech Used:
+- HTML
+- CSS
+- JavaScript
+- Google Maps API
+- PHP
