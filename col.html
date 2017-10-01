@@ -1,6 +1,69 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <!--CSS Style Code for the header-->
+<style>
+  p {
+    margin: 1cm 1cm 1cm 1cm;
+    color: "white";
+  }
+   body {
+     font-family: verdana;
+     size: 12;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Verdana;
+}
+li a:hover {
+    background-color: #111;
+}
+</style>
+</head>
+
+<body>
+<!-- Header List -->
+<ul>
+  <li><a href="http://nootter.com.s3-website-us-east-1.amazonaws.com/">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="https://s3.amazonaws.com/nootter.com/organizer.html">Organizer</a></li>
+  <li><a href="https://s3.amazonaws.com/nootter.com/map.html">Map</a></li>
+  <li><a class="active" href="https://s3.amazonaws.com/nootter.com/col.html">COL</a></li>
+  <li><a href="#interviewtips/suggestions">Inteview Tips</a></li>
+</ul>
+
+<style>
+     { margin: 0; padding: 0; }
+    html { 
+        background-image: url("bground.jpeg");
+        background-size: cover;
+        background-color: #696969;
+    } 
+    }
+</style>
+
+
+
+
+
+
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>jQuery UI Autocomplete - Default functionality</title>
@@ -31,7 +94,9 @@ $( function() {
 </head>
 
 <body>
- 
+ <h2><center>Cost of Living Calculator</center> </h2>
+
+ <p> Say you have two different job offers located across the country, with completely different salaries.  Sure, you can compare the salaries directly, but how will you know which would provide a better living standard?  Enter the information below to find out! </p>
 
 <form action="/diamondHacks/action.php">
 
@@ -57,7 +122,7 @@ $( function() {
   <input id="tagss" name="moneytwo">
 
  <br><br>
-Want to compare purchasing power?  Select what to compare.
+Want to compare purchasing power of random objects?  Select what to compare.
 <select name="funOption">
   <option value="NA">N/A</option>
   <option value="Burritos">Chipotle Burritos</option>
@@ -69,16 +134,6 @@ Want to compare purchasing power?  Select what to compare.
 <input type="submit" value="Submit" >
 </label>
 </form>  
-
-<img class="otter" src= "otter3.png">
-<style type="text/css">
-  .otter {
-    position: absolute;
-    right: 0px; 
-    bottom: 0px;
-}
-
-</style>
  
 </body>
 </html>
