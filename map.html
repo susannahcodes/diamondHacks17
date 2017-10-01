@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!--CSS Style Code for the header-->
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Verdana;
+}
+li a:hover {
+    background-color: #111;
+}
+</style>
+</head>
+<body>
+<!-- Header List -->
+<ul>
+  <li><a href="https://s3.amazonaws.com/nootter.com/index.html">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="https://s3.amazonaws.com/nootter.com/organizer.html">Organizer</a></li>
+  <li><a class="active" href="#map">Map</a></li>
+  <li><a href="https://s3.amazonaws.com/nootter.com/col.html">COL</a></li>
+  <li><a href="#interviewtips/suggestions">Inteview Tips</a></li>
+</ul>
+
+<!-- Page Background -->
+<style>
+     { margin: 0; padding: 0; }
+    html { 
+        background-image: url("images/bground.jpeg");
+        background-size: 100% 100%;
+       /** background-color: #696969; */
+    }
+   
+    }
+</style>
+    <title> Job Hunt</title> 
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 75%;
+        width: 75%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      var map;
+      var infowindow;
+
+      function initMap() {
+        var raleigh = {lat: 35.77, lng: -78.638};
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: raleigh,
+          zoom: 15
+        });
+
+        infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+          location: raleigh,
+          radius: 3000,
+          type: ['hospital']
+        }, callback);
+      }
+
+      function callback(results, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+          }
+        }
+      }
+
+      function createMarker(place) {
+        var placeLoc = place.geometry.location;
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1><center>Job Hunt</center></h1>
+<p><center>Looking for work? Let's find some places nearby.</center></p>
+
+<form action="submit.php" method="post">
+  <fieldset>
+    <legend>Location information</legend>
+    Where do you live?<br>
+    <input type="text" name="location">
+    <br>
+    Radius? <br>
+    <input type="text" name="radius">
+    <br>
+    Industry? <br>
+    <input type="text" name="industry">
+    <br><br>
+    <input type="submit">
+  </fieldset>
+</form>
+<br>
+    <div id="map"></div> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbZDhbzu4B7_vv6cckv8wzG5TPKZn70Nw&libraries=places&callback=initMap" async defer></script> 
+  </body>
+</html>

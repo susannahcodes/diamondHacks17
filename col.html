@@ -1,9 +1,59 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <!--CSS Style Code for the header-->
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Verdana;
+}
+li a:hover {
+    background-color: #111;
+}
+</style>
+</head>
+
+<body>
+<!-- Header List -->
+<ul>
+  <li><a href="http://nootter.com.s3-website-us-east-1.amazonaws.com/">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="https://s3.amazonaws.com/nootter.com/organizer.html">Organizer</a></li>
+  <li><a href="https://s3.amazonaws.com/nootter.com/map.html">Map</a></li>
+  <li><a class="active" href="https://s3.amazonaws.com/nootter.com/col.html">COL</a></li>
+  <li><a href="#interviewtips/suggestions">Inteview Tips</a></li>
+</ul>
+
+<style>
+    { margin: 0; padding: 0; }
+    html { 
+        background-image: url("images/bground.jpeg");
+        background-size: cover;
+       /* background-color: #cccfff; */
+    }
+</style>
+
+
+<h2><center>Cost of Living Calculator</center> </h2>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Autocomplete - Default functionality</title>
+  <title>Cost of Living Calculator</title>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -33,9 +83,9 @@ $( function() {
 <body>
  
 
-<form action="/diamondHacks/action.php">
-
-
+<form action="https://s3.amazonaws.com/nootter.com/action.php">
+<fieldset>
+    <legend>Location information</legend>
 <label class="ui-widget">
   <label for="tags">City One: </label>
   <input id="tags" name="cityone">
