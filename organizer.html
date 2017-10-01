@@ -2,65 +2,47 @@
 <html>
 <head>
 <style>
-body {
-    font-family: "Lato", sans-serif;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+li {
+    float: left;
 }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+li a {
     display: block;
-    transition: 0.3s;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.sidenav a:hover {
-    color: #f1f1f1;
+li a:hover:not(.active) {
+    background-color: #111;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.active {
+    background-color: #4CAF50;
 }
 </style>
 </head>
+
 <body>
 
-
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Home</a>
-  <a href="#">Organizer</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-</div>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#organizer">Organizer</a></li>
+  <li><a href="#map">Map</a></li>
+  <li><a href="#COL">COL</a></li>
+</ul>
 
 <h2>Job Organizer</h2>
 <p>Use this table to help you organize your job searches!</p>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
 <div class="set-form">
   <table id="myTable" class="table table-bordered">
@@ -116,16 +98,6 @@ body {
 <script type="text/javascript">
 function add_fields() {
 document.getElementById("myTable").insertRow(-1).innerHTML = '<tr><td><textarea name ="Company" placeholder="Company" th: field = "${questionAnswerSet.company}" id="company" style = "resize: none; width:100%;"></textarea></td><td><textarea name="Job Title" placeholder ="Job Title" th: field = "${questionAnswerSet.jobtitle}" id="job title" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Recruiter/Contact Info" placeholder ="Recruiter/Contact Info" th: field = "${questionAnswerSet.recruiter/contactinfo}" id="recruiter/contact info" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Requirements" placeholder ="Requirements" th: field = "${questionAnswerSet.requirements}" id="requirements" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Personal Connection" placeholder ="Personal Connection" th: field = "${questionAnswerSet.personalconnection}" id="personal connection" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Application Due Date" placeholder ="Application Due Date" th: field = "${questionAnswerSet.applicationduedate}" id="application due date" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Applied" placeholder ="Applied?" th: field = "${questionAnswerSet.applied}" id="applied" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Interview Date" placeholder ="Interview Date" th: field = "${questionAnswerSet.interviewdate}" id="interview date" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Thank You" placeholder ="Thank You" th: field = "${questionAnswerSet.thankyou}" id="thank you" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Current Status" placeholder ="Current Status" th: field = "${questionAnswerSet.currentstatus}" id="current status" style="resize:none;width: 100%;"></textarea></td >';
-}
-</script>
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
 }
 </script>
 
