@@ -33,6 +33,35 @@ li a {
 li a:hover {
     background-color: #111;
 }
+label {
+  padding: 9px;
+   font-size: 18px;
+   line-height: 18px;
+}
+input {
+  height:20px;
+  width:200px;
+  font-size: 14px;
+}
+input[type=submit] {
+    padding:1px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 15px;
+    border-radius: 15px; 
+}
+input[type=submit] {
+    padding:1px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 15px;
+    border-radius: 15px; 
+}
+form {
+  text-align: center;
+}
 </style>
 </head>
 
@@ -107,9 +136,9 @@ $( function() {
 </label>
       
 <label class="ui-widgets">
-  <label for="tagss">City Two: </label>
+  <label for="tagss">      City Two: </label>
   <input id="tagss" name="citytwo">
-
+</label>
  <br><br>
 
 <label class="textInput">
@@ -119,7 +148,8 @@ $( function() {
       
 <label class="textInputs">
   <label for="tis">Salary Two: </label>
-  <input id="tagss" name="moneytwo">
+  <input id="tagss" name="moneytwo" >
+</label>
 
  <br><br>
 Want to compare purchasing power of random objects?  Select what to compare.
@@ -133,7 +163,17 @@ Want to compare purchasing power of random objects?  Select what to compare.
  <br><br>
 <input type="submit" value="Submit" >
 </label>
-</form>  
+</form> 
+
+<img class="otter" src= "otter3.png">
+<style type="text/css">
+ .otter {
+   position: absolute;
+   right: 0px;
+   bottom: 0px;
+}
+
+</style> 
  
 </body>
 </html>
