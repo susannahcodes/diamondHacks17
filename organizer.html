@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--CSS Style Code for the header-->
 <style>
 ul {
     list-style-type: none;
@@ -9,41 +10,46 @@ ul {
     overflow: hidden;
     background-color: #333;
 }
-
 li {
     float: left;
 }
-
 li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: Verdana;
 }
-
-li a:hover:not(.active) {
+li a:hover {
     background-color: #111;
-}
-
-.active {
-    background-color: #4CAF50;
 }
 </style>
 </head>
 
 <body>
-
+<!-- Header List -->
 <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a href="#organizer">Organizer</a></li>
   <li><a href="#map">Map</a></li>
   <li><a href="#COL">COL</a></li>
+  <li><a href="#interviewtips/suggestions">Inteview Tips/Suggestions</a></li>
 </ul>
 
-<h2>Job Organizer</h2>
-<p>Use this table to help you organize your job searches!</p>
+<h2>Job Organizer </h2>
 
+<p>Use this table to help you organize your job searches!</p>
+<style type="text/css">
+h2 
+{
+  font-family: "Verdana"
+}
+p
+{
+   font-family: "Verdana"
+}
+</style>
 <div class="set-form">
   <table id="myTable" class="table table-bordered">
     <tr>
@@ -60,34 +66,34 @@ li a:hover:not(.active) {
     </tr>
     <tr>
       <td>
-        <textarea name="Company" placeholder="Company" th:field="${questionAnswerSet.company}" id="company" style="resize: none; width: 100%;"></textarea>
+        <textarea name="Company" placeholder="Company" th:field="${questionAnswerSet.company}" id="company" style="resize: none; width: 95%;"></textarea>
       </td>
       <td>
-        <textarea name="Job Title" placeholder="Job Title" th:field="${questionAnswerSet.jobtitle}" id="job title" style="resize: none; width: 100%;"></textarea>
+        <textarea name="Job Title" placeholder="Job Title" th:field="${questionAnswerSet.jobtitle}" id="job title" style="resize: none; width: 95%;"></textarea>
       </td>
       <td>
-        <textarea name="Recruiter/Contact Info" placeholder="Recruiter/Contact Info" th:field="${questionAnswerSet.recruiter/contactinfo}" id="recruiter/contact info" style="resize: none; width: 100%;"></textarea>
+        <textarea name="Recruiter/Contact Info" placeholder="Recruiter/Contact Info" th:field="${questionAnswerSet.recruiter/contactinfo}" id="recruiter/contact info" style="resize: none; width: 95%;"></textarea>
       </td>
        <td>
-        <textarea name="Requirements" placeholder="Requirements" th:field="${questionAnswerSet.requirements}" id="requirements" style="resize: none; width: 100%;"></textarea>
+        <textarea name="Requirements" placeholder="Requirements" th:field="${questionAnswerSet.requirements}" id="requirements" style="resize: none; width: 95%;"></textarea>
       </td>
        <td>
-        <textarea name="Personal Connection" placeholder="Personal Connection" th:field="${questionAnswerSet.personalconnection}" id="personal connection" style="resize: none; width: 100%;"></textarea>
+        <textarea name="Personal Connection" placeholder="Personal Connection" th:field="${questionAnswerSet.personalconnection}" id="personal connection" style="resize: none; width: 95%;"></textarea>
       </td>
        <td>
-        <textarea name="Application Due Date" placeholder="Application Due Date" th:field="${questionAnswerSet.applicationduedate}" id="application due date" style="resize: none; width: 100%;"></textarea>
+        <textarea name="Application Due Date" placeholder="Application Due Date" th:field="${questionAnswerSet.applicationduedate}" id="application due date" style="resize: none; width: 95%;"></textarea>
       </td>
        <td>
-        <textarea name="Applied" placeholder="Applied?" th:field="${questionAnswerSet.applied}" id="applied" style="resize: none; width: 100%;"></textarea>
+        <textarea name="Applied" placeholder="Applied?" th:field="${questionAnswerSet.applied}" id="applied" style="resize: none; width: 95%;"></textarea>
       </td>
        <td>
-        <textarea name="Interview Date" placeholder="Interview Date" th:field="${questionAnswerSet.interviewdate}" id="interview date" style="resize: none; width: 100%;"></textarea>
+        <textarea name="Interview Date" placeholder="Interview Date" th:field="${questionAnswerSet.interviewdate}" id="interview date" style="resize: none; width: 95%;"></textarea>
       </td>
        <td>
-        <textarea name="Thank You" placeholder="Thank You" th:field="${questionAnswerSet.thankyou}" id="thank you" style="resize: none; width: 100%;"></textarea>
+        <textarea name="Thank You" placeholder="Thank You" th:field="${questionAnswerSet.thankyou}" id="thank you" style="resize: none; width: 95%;"></textarea>
       </td>
        <td>
-        <textarea name="Current Status" placeholder="Current Status" th:field="${questionAnswerSet.currentstatus}" id="current status" style="resize: none; width: 100%;"></textarea>
+        <textarea name="Current Status" placeholder="Current Status" th:field="${questionAnswerSet.currentstatus}" id="current status" style="resize: none; width: 95%;"></textarea>
       </td>
     </tr>
   </table>
@@ -103,6 +109,22 @@ function add_fields() {
 document.getElementById("myTable").insertRow(-1).innerHTML = '<tr><td><textarea name ="Company" placeholder="Company" th: field = "${questionAnswerSet.company}" id="company" style = "resize: none; width:100%;"></textarea></td><td><textarea name="Job Title" placeholder ="Job Title" th: field = "${questionAnswerSet.jobtitle}" id="job title" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Recruiter/Contact Info" placeholder ="Recruiter/Contact Info" th: field = "${questionAnswerSet.recruiter/contactinfo}" id="recruiter/contact info" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Requirements" placeholder ="Requirements" th: field = "${questionAnswerSet.requirements}" id="requirements" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Personal Connection" placeholder ="Personal Connection" th: field = "${questionAnswerSet.personalconnection}" id="personal connection" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Application Due Date" placeholder ="Application Due Date" th: field = "${questionAnswerSet.applicationduedate}" id="application due date" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Applied" placeholder ="Applied?" th: field = "${questionAnswerSet.applied}" id="applied" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Interview Date" placeholder ="Interview Date" th: field = "${questionAnswerSet.interviewdate}" id="interview date" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Thank You" placeholder ="Thank You" th: field = "${questionAnswerSet.thankyou}" id="thank you" style="resize:none;width: 100%;"></textarea></td ><td><textarea name="Current Status" placeholder ="Current Status" th: field = "${questionAnswerSet.currentstatus}" id="current status" style="resize:none;width: 100%;"></textarea></td >';
 }
 </script>
+<!--Table Style-->
+<style type="text/css">
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+   border: 1px solid black;
+   text-align: center;
+
+}
+th {
+    background-color: #ffad33;
+    color: black;
+}
+</style>
+<!-- Page Background -->
 
 <style>
     { margin: 0; padding: 0; }
